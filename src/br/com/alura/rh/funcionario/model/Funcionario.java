@@ -7,62 +7,65 @@ import java.time.LocalDate;
 
 public class Funcionario {
 
-	private String nome;
-	private String cpf;
-	private Cargo cargo;
-	private BigDecimal salario;
-	private LocalDate dataUltimoReajuste;
+    private String nome;
+    private String cpf;
+    private Cargo cargo;
+    private BigDecimal salario;
+    private LocalDate dataUltimoReajuste;
 
-	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.cargo = cargo;
-		this.salario = salario;
-	}
+    public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.cargo = cargo;
+        this.salario = salario;
+    }
 
-	public void atualizaSalario(BigDecimal salarioReajustado) {
-		this.salario = salarioReajustado;
-		this.dataUltimoReajuste = LocalDate.now();
-	}
+    public void atualizaSalario(BigDecimal salarioReajustado) {
+        this.salario = salarioReajustado;
+        this.dataUltimoReajuste = LocalDate.now();
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public void promover(Cargo novoCargo) {
+        this.cargo = novoCargo;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public String getCpf() {
-		return cpf;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+    public String getCpf() {
+        return cpf;
+    }
 
-	public Cargo getCargo() {
-		return cargo;
-	}
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
-	public void setCargo(Cargo cargo) {
-		this.cargo = cargo;
-	}
+    public Cargo getCargo() {
+        return cargo;
+    }
 
-	public BigDecimal getSalario() {
-		return salario;
-	}
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
 
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
-	}
+    public BigDecimal getSalario() {
+        return salario;
+    }
 
-	public LocalDate getDataUltimoReajuste() {
-		return dataUltimoReajuste;
-	}
+    public void setSalario(BigDecimal salario) {
+        this.salario = salario;
+    }
 
-	public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
-		this.dataUltimoReajuste = dataUltimoReajuste;
-	}
+    public LocalDate getDataUltimoReajuste() {
+        return dataUltimoReajuste;
+    }
 
+    public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
+        this.dataUltimoReajuste = dataUltimoReajuste;
+    }
 }
