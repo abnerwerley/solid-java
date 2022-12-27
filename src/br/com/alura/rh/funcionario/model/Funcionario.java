@@ -1,4 +1,6 @@
-package br.com.alura.rh.model;
+package br.com.alura.rh.funcionario.model;
+
+import br.com.alura.rh.cargo.model.Cargo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
